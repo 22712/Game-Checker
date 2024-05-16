@@ -1,11 +1,15 @@
 from tkinter import *
 from PIL import Image, ImageTk
+import subprocess
 
 def return_to_main():
     pass
 
 def return_to_previous():
     pass
+
+def open_new_script(script_name):
+    subprocess.Popen(["python", script_name])
 
 def create_new_window(title):
     new_window = Toplevel(root)
@@ -24,9 +28,9 @@ def create_menus():
     mainmenu.add_command(label="Return to Previous", command=return_to_previous)
     
     more_menu = Menu(mainmenu, tearoff=0)
-    more_menu.add_command(label="Support", command=lambda: create_new_window("Support"))
-    more_menu.add_command(label="Contact", command=lambda: create_new_window("Contact"))
-    more_menu.add_command(label="Clear all", command=lambda: create_new_window("Clear all"))
+    more_menu.add_command(label="Support", command=lambda: open_new_script("support.py"))
+    more_menu.add_command(label="Contact", command=lambda: open_new_script("contact.py"))
+    more_menu.add_command(label="QwQ", command=lambda: open_new_script("QwQ.py"))
     mainmenu.add_cascade(label="More", menu=more_menu)
 
     root.config(menu=mainmenu)
@@ -37,19 +41,19 @@ def create_game_icons():
 
     image_size = (100, 100)
 
-    game1_image = Image.open("D:/Code/Python/DDT/mihuyou.png").resize(image_size)
+    game1_image = Image.open("Image\mihuyou.png").resize(image_size)
     game1_photo = ImageTk.PhotoImage(game1_image)
     game1_button = Button(game_icons_frame, image=game1_photo, text="Game 1", compound=TOP, command=lambda: create_new_window("Game 1"))
     game1_button.image = game1_photo
     game1_button.grid(row=0, column=0, padx=10, pady=10)
 
-    game2_image = Image.open("D:/Code/Python/DDT/TM.png").resize(image_size)
+    game2_image = Image.open("Image\TM.png").resize(image_size)
     game2_photo = ImageTk.PhotoImage(game2_image)
     game2_button = Button(game_icons_frame, image=game2_photo, text="Game 2", compound=TOP, command=lambda: create_new_window("Game 2"))
     game2_button.image = game2_photo
     game2_button.grid(row=0, column=1, padx=10, pady=10)
 
-    game3_image = Image.open("D:/Code/Python/DDT/Mincecraft.png").resize(image_size)
+    game3_image = Image.open("Image\Mincecraft.png").resize(image_size)
     game3_photo = ImageTk.PhotoImage(game3_image)
     game3_button = Button(game_icons_frame, image=game3_photo, text="Game 3", compound=TOP, command=lambda: create_new_window("Game 3"))
     game3_button.image = game3_photo
