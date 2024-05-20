@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .support-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .support-container h1 {
+            margin-top: 0;
+            font-size: 24px;
+            text-align: center;
+        }
+        .support-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .support-container input, 
+        .support-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .support-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .support-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="support-container">
+    <h1>Support</h1>
+    <form action="/submit_form" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

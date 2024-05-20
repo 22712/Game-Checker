@@ -1,40 +1,33 @@
 from tkinter import *
 from tkinter import messagebox
 import subprocess
-       
-       
-def Ok():
-     uname = e1.get()
-     password = e2.get()
-       
-     if(uname == "" and password == "") :
-           messagebox.showinfo("", "Blank Not allowed")
-        
-       
-     elif(uname == "Admin" and password == "123"):        
-           messagebox.showinfo("","Login Success")
-           root.destroy()
-           subprocess.run(["python", "dashboard.py"])
-       
-     else :
-           messagebox.showinfo("","Incorrent Username and Password")
+
+ADMIN_USERNAME = "admin"
+ADMIN_PASSWORD = "password"
+
+def login():
+    username = username_entry.get()
+    password = password_entry.get()
+
+    if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
+        messagebox.showinfo("Login Successful", f"Welcome, {username}!")
+        root.destroy()
+        process = subprocess.Popen(["python", "Firstpage.py"])
+    else:
+        messagebox.showerror("Login Failed", "Invalid username or password.")
+
 root = Tk()
-root.title("Login")
+root.title("Login System")
 root.geometry("300x200")
-global e1
-global e2
-       
-Label(root, text="UserName").place(x=10, y=10)
-Label(root, text="Password").place(x=10, y=40)
-       
-e1 = Entry(root)
-e1.place(x=140, y=10)
-       
-e2 = Entry(root)
-e2.place(x=140, y=40)
-e2.config(show="*")
-       
-       
-Button(root, text="Login", command=Ok ,height = 3, width = 13).place(x=10, y=100)
-       
+
+Label(root, text="Username").pack(pady=5)
+username_entry = Entry(root)
+username_entry.pack(pady=5)
+
+Label(root, text="Password").pack(pady=5)
+password_entry = Entry(root, show='*')
+password_entry.pack(pady=5)
+
+Button(root, text="Login", command=login).pack(pady=20)
+
 root.mainloop()
