@@ -44,75 +44,33 @@ def create_game_icons():
 
     game1_image = Image.open("Image\mihuyou.png").resize(image_size)
     game1_photo = ImageTk.PhotoImage(game1_image)
-    game1_button = Button(game_icons_frame, image=game1_photo, text="Game 1", compound=TOP, command=lambda: create_new_window("Game 1"))
+    game1_button = Button(game_icons_frame, image=game1_photo, text="Genshen", compound=TOP, command=lambda: create_new_window("Game 1"))
     game1_button.image = game1_photo
     game1_button.grid(row=0, column=0, padx=10, pady=10)
 
     game2_image = Image.open("Image\TM.png").resize(image_size)
     game2_photo = ImageTk.PhotoImage(game2_image)
-    game2_button = Button(game_icons_frame, image=game2_photo, text="Game 2", compound=TOP, command=lambda: create_new_window("Game 2"))
+    game2_button = Button(game_icons_frame, image=game2_photo, text="To", compound=TOP, command=lambda: create_new_window("Game 2"))
     game2_button.image = game2_photo
     game2_button.grid(row=0, column=1, padx=10, pady=10)
 
     game3_image = Image.open("Image\Mincecraft.png").resize(image_size)
     game3_photo = ImageTk.PhotoImage(game3_image)
-    game3_button = Button(game_icons_frame, image=game3_photo, text="Game 3", compound=TOP, command=lambda: create_new_window("Game 3"))
+    game3_button = Button(game_icons_frame, image=game3_photo, text="Mincecraft", compound=TOP, command=lambda: create_new_window("Game 3"))
     game3_button.image = game3_photo
     game3_button.grid(row=0, column=2, padx=10, pady=10)
 
-    game1_image = Image.open("Image\mihuyou.png").resize(image_size)
+    game1_image = Image.open("Image\R.png").resize(image_size)
     game1_photo = ImageTk.PhotoImage(game1_image)
-    game1_button = Button(game_icons_frame, image=game1_photo, text="Game 1", compound=TOP, command=lambda: create_new_window("Game 1"))
+    game1_button = Button(game_icons_frame, image=game1_photo, text="APEX", compound=TOP, command=lambda: create_new_window("Game 1"))
     game1_button.image = game1_photo
     game1_button.grid(row=0, column=3, padx=10, pady=10)
 
-    game2_image = Image.open("Image\TM.png").resize(image_size)
+    game2_image = Image.open("Image\OIP.png").resize(image_size)
     game2_photo = ImageTk.PhotoImage(game2_image)
-    game2_button = Button(game_icons_frame, image=game2_photo, text="Game 2", compound=TOP, command=lambda: create_new_window("Game 2"))
+    game2_button = Button(game_icons_frame, image=game2_photo, text="COD", compound=TOP, command=lambda: create_new_window("Game 2"))
     game2_button.image = game2_photo
     game2_button.grid(row=0, column=4, padx=10, pady=10)
-
-    game3_image = Image.open("Image\Mincecraft.png").resize(image_size)
-    game3_photo = ImageTk.PhotoImage(game3_image)
-    game3_button = Button(game_icons_frame, image=game3_photo, text="Game 3", compound=TOP, command=lambda: create_new_window("Game 3"))
-    game3_button.image = game3_photo
-    game3_button.grid(row=0, column=5, padx=10, pady=10)
-
-    game1_image = Image.open("Image\mihuyou.png").resize(image_size)
-    game1_photo = ImageTk.PhotoImage(game1_image)
-    game1_button = Button(game_icons_frame, image=game1_photo, text="Game 1", compound=TOP, command=lambda: create_new_window("Game 1"))
-    game1_button.image = game1_photo
-    game1_button.grid(row=1, column=0, padx=10, pady=10)
-
-    game2_image = Image.open("Image\TM.png").resize(image_size)
-    game2_photo = ImageTk.PhotoImage(game2_image)
-    game2_button = Button(game_icons_frame, image=game2_photo, text="Game 2", compound=TOP, command=lambda: create_new_window("Game 2"))
-    game2_button.image = game2_photo
-    game2_button.grid(row=1, column=1, padx=10, pady=10)
-
-    game3_image = Image.open("Image\Mincecraft.png").resize(image_size)
-    game3_photo = ImageTk.PhotoImage(game3_image)
-    game3_button = Button(game_icons_frame, image=game3_photo, text="Game 3", compound=TOP, command=lambda: create_new_window("Game 3"))
-    game3_button.image = game3_photo
-    game3_button.grid(row=1, column=2, padx=10, pady=10)
-
-    game1_image = Image.open("Image\mihuyou.png").resize(image_size)
-    game1_photo = ImageTk.PhotoImage(game1_image)
-    game1_button = Button(game_icons_frame, image=game1_photo, text="Game 1", compound=TOP, command=lambda: create_new_window("Game 1"))
-    game1_button.image = game1_photo
-    game1_button.grid(row=1, column=3, padx=10, pady=10)
-
-    game2_image = Image.open("Image\TM.png").resize(image_size)
-    game2_photo = ImageTk.PhotoImage(game2_image)
-    game2_button = Button(game_icons_frame, image=game2_photo, text="Game 2", compound=TOP, command=lambda: create_new_window("Game 2"))
-    game2_button.image = game2_photo
-    game2_button.grid(row=1, column=4, padx=10, pady=10)
-
-    game3_image = Image.open("Image\Mincecraft.png").resize(image_size)
-    game3_photo = ImageTk.PhotoImage(game3_image)
-    game3_button = Button(game_icons_frame, image=game3_photo, text="Game 3", compound=TOP, command=lambda: create_new_window("Game 3"))
-    game3_button.image = game3_photo
-    game3_button.grid(row=1, column=5, padx=10, pady=10)
 
 create_menus()
 create_game_icons()
