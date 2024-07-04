@@ -83,6 +83,7 @@ initialize_db()
 root = Tk()
 root.title("Login System")
 root.geometry("300x250")
+root.configure(bg="#3E4149")
 
 Label(root, text="Username").pack(pady=5)
 username_entry = Entry(root)
