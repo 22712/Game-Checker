@@ -21,6 +21,7 @@ def create_new_window(title):
 root = Tk()
 root.geometry("800x600")
 root.title("Game Checker")
+root.configure(bg="pink")
 
 def create_menus():
     mainmenu = Menu(root)
