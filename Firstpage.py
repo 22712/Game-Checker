@@ -55,7 +55,7 @@ def create_game_icons():
 
     game1_image = Image.open("Image/R.png").resize(image_size)
     game1_photo = ImageTk.PhotoImage(game1_image)
-    game1_button = Button(game_icons_frame, image=game1_photo, text="APEX", compound=TOP, command=lambda: create_new_window("Game 1"))
+    game1_button = Button(game_icons_frame, image=game1_photo, text="APEX", compound=TOP, command=lambda: open_new_script("apexsecondarypage.py"))
     game1_button.image = game1_photo
     game1_button.grid(row=0, column=0, padx=10, pady=10)
 
