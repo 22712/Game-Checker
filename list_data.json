@@ -1,11 +1,3 @@
 {
-    "Default": [],
-    "Terraria": [],
-    "Minecraft": [
-        {
-            "name": "wood",
-            "quantity": 1235,
-            "collected": false
-        }
-    ]
+    "Default": []
 }
