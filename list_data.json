@@ -1,3 +1,10 @@
 {
-    "Default": []
+    "Default": [],
+    "test": [
+        {
+            "name": "wood",
+            "quantity": 22,
+            "collected": false
+        }
+    ]
 }
